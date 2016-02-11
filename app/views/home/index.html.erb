@@ -4,47 +4,22 @@
   <p>Problems look mighty small from 150 miles up.</p>
 </div>
 
-<div class="container">  
-  <div class="media">
-    <div class="media-left">
-      <a href="#">
-        <%= image_tag('sample.png', class: 'media-object', alt: 'default img') %>
-      </a>
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading">user1@example.com asked:</h4>
-      <p>Many say exploration is part of our destiny, but it’s actually our duty to future generations and their quest to ensure the survival of the human species.</p>
-      <div>
-        <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
+<div class="container">
+  <% @questions.each do |q| %>  
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object", src="<%= q.gravatar %>">
+        </a>
       </div>
+      <div class="media-body">
+        <h4 class="media-heading"><%= q.email %> asked:</h4>
+        <p><%= q.body %></p>
+        <div>
+          <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
+        </div>
+      </div>    
     </div>
-  </div>
-  <div class="media">
-    <div class="media-left">
-      <a href="#">
-        <%= image_tag('sample.png', class: 'media-object', alt: 'default img') %>
-      </a>
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading">user1@example.com asked:</h4>
-      <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-      <div>
-        <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
-      </div>
-    </div>
-  </div>
-  <div class="media">
-    <div class="media-left">
-      <a href="#">
-        <%= image_tag('sample.png', class: 'media-object', alt: 'default img') %>
-      </a>
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading">user1@example.com asked:</h4>
-      <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-      <div>
-        <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
-      </div>
-    </div>
-  </div>
+  <% end %>
 </div>
+
