@@ -21,40 +21,21 @@
 
 			<%= render 'home/new_answer_form' %>
 
-			<div class="media">
-				  <div class="media-left">
-				    <a href="#">
-				    	<%= image_tag('sample.png', class: 'media-object', alt: 'default img') %>
-				    </a>
-				  </div>
-				  <div class="media-body">
-				    <h4 class="media-heading">user1@example.com answered:</h4>
-						<p>Many say exploration is part of our destiny, but it’s actually our duty to future generations and their quest to ensure the survival of the human species.</p>
-				  </div>
-				</div>
+			<% @answers.each do |answer| %>
 				<div class="media">
 				  <div class="media-left">
 				    <a href="#">
-				    	<%= image_tag('sample.png', class: 'media-object', alt: 'default img') %>
+				    	<img class="media-object" src="<%= answer.gravatar %>">
 				    </a>
 				  </div>
 				  <div class="media-body">
-				    <h4 class="media-heading">user1@example.com answered:</h4>
-						<p>Many say exploration is part of our destiny, but it’s actually our duty to future generations and their quest to ensure the survival of the human species.</p>
+				    <h4 class="media-heading"><%= answer.email %> answered:</h4>
+				    <%= time_ago_in_words answer.created_at %> ago
+						<p><%= answer.body %></p>
 				  </div>
 				</div>
-				<div class="media">
-				  <div class="media-left">
-				    <a href="#">
-				    	<%= image_tag('sample.png', class: 'media-object', alt: 'default img') %>
-				    </a>
-				  </div>
-				  <div class="media-body">
-				    <h4 class="media-heading">user1@example.com answered:</h4>
-						<p>Many say exploration is part of our destiny, but it’s actually our duty to future generations and their quest to ensure the survival of the human species.</p>
-				  </div>
-				</div>
-			</div>
+			<% end %>
+
 		</div>
 	</div>
 </div>
