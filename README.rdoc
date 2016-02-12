@@ -1,28 +1,4 @@
-== README
+https://app.pluralsight.com/player?course=ruby-rails-4-getting-started&author=samer-buna&name=ruby-rails-4-getting-started-m3&clip=6&mode=live
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+sucker_punch may not be compatible with rails 4
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
